@@ -1,7 +1,7 @@
 # D3M+Arrayfire Docker Image and Develop
 
 Build global docker image w/ d3m and arrayfire named `arrayfire-d3m`
-after populating `out` and `out/context` with necessary development
+after populating `out/` and `out/context/` with necessary development
 files.
 
     0-build-d3m-dir.sh
@@ -21,3 +21,7 @@ needs priming:
 Arrayfire D3M should be good to go:
 
     4-example-af.sh
+
+Clean up (possibly start over) by deleting `out/`:
+
+    sudo rm -rf out
