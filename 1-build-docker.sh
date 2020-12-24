@@ -7,7 +7,7 @@ if [ -n "$1" ]; then D3M_DIR="$1"; fi
 [ -d "$D3M_DIR" ]
 
 if ! [ -d "out/context/d3m-arrayfire-primitives" ]; then
-    ONLY_ARRAYFIRE_D3M=true ./build-d3m-dir.sh out/context
+    ONLY_ARRAYFIRE_D3M=true ./0-build-d3m-dir.sh out/context
 fi
 cp $(pwd)/Dockerfile $(pwd)/out/context/Dockerfile
 docker build -t arrayfire-d3m out/context
