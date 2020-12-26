@@ -11,7 +11,6 @@
 set -e
 
 D3M_DIR=$(pwd)/out
-if [ -n "$1" ]; then D3M_DIR="$1"; fi
 mkdir -p $D3M_DIR
 
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"

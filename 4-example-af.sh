@@ -3,7 +3,6 @@
 set -e
 
 D3M_DIR=$(pwd)/out
-if [ -n "$1" ]; then D3M_DIR="$1"; fi
 [ -d "$D3M_DIR" ]
 
 DATA=/mnt/datasets/training_datasets/seed_datasets_archive

@@ -3,7 +3,6 @@
 set -ex
 
 D3M_DIR=$(pwd)/out
-if [ -n "$1" ]; then D3M_DIR="$1"; fi
 [ -d "$D3M_DIR" ]
 
 if ! [ -d "out/context/d3m-arrayfire-primitives" ]; then
