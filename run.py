@@ -1,5 +1,5 @@
 #!/usr/bin/python3.6
-# -*- compile-command: "docker run --rm -v /share/gpryor/bootstrap-d3m-arrayfire-docker/out/d3m-arrayfire-primitives:/mnt/d3m-arrayfire-primitives -v /share/gpryor/bootstrap-d3m-arrayfire-docker/out/datasets:/mnt/datasets -v /share/gpryor/bootstrap-d3m-arrayfire-docker:/mnt/bootstrap-d3m-arrayfire-docker arrayfire-d3m bash -c 'cd /mnt/bootstrap-d3m-arrayfire-docker && echo start && python3.6 run.py && echo stop'"; -*-
+# -*- compile-command: "./run.sh"; -*-
 import os
 import time
 import logging
