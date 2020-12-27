@@ -1,5 +1,5 @@
 #!/usr/bin/python3.6
-# -*- compile-command: "./run.sh"; -*-
+# -*- compile-command: "SCREEN_NAME=belle-build ./run.sh 'cd /mnt/bootstrap-d3m-arrayfire-docker && /usr/bin/time python3.6 run.py'"; -*-
 import os
 import time
 import logging
