@@ -32,9 +32,10 @@ rm -rf $D3M_DIR/datasets
 BYTES=$(stat -c '%s' $D3M_DIR/datasets.baseball.tar.bz2)
 (cd $D3M_DIR && pv -pterab -s $BYTES datasets.baseball.tar.bz2 | tar xj)
 
+clone-if-missing https://gitlab.com/datadrivendiscovery/d3m d3m
+
 clone-if-missing https://gitlab.com/datadrivendiscovery/primitives primitives
 (cd $D3M_DIR/primitives && git checkout v2020.1.24)
 
-clone-if-missing https://gitlab.com/datadrivendiscovery/d3m d3m
 
 mkdir -p $D3M_DIR/pipeline-outputs
