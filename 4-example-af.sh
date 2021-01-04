@@ -1,5 +1,5 @@
 #!/bin/bash
-# -*- compile-command: "./example-af.sh"; -*-
+# -*- compile-command: "./4-example-af.sh"; -*-
 set -e
 
 D3M_DIR=$(pwd)/out
