@@ -5,9 +5,9 @@ set -ex
 D3M_DIR=$(pwd)/out
 [ -d "$D3M_DIR" ]
 
-docker run --rm \
+docker run --rm -it \
        -v $D3M_DIR/datasets:/mnt/datasets \
        -v $D3M_DIR/d3m-arrayfire-primitives:/mnt/d3m-arrayfire-primitives \
        -v $D3M_DIR/..:/mnt/bootstrap-d3m-arrayfire-docker \
        arrayfire-d3m \
-       bash -c 'cd /mnt/bootstrap-d3m-arrayfire-docker && python3.6 unittest-af.py'
+       bash -c 'cd /mnt/bootstrap-d3m-arrayfire-docker && PYTHONPATH=/mnt/d3m-arrayfire-primitives/af_primitives python3.6 unittest-af.py'
