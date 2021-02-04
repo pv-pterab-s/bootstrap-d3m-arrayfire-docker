@@ -114,10 +114,8 @@ class RefAfLogisticRegression:
 class AFLogisticLogisticRegression(unittest.TestCase):
     def test_basic(self):
         num_classes = np.unique(iris.target).shape[0]
-        M(num_classes)
 
-        # Convert numpy array to af array (and convert labels/targets from ints to
-        # one-hot encodings)
+        # Convert numpy array to af array; convert labels from ints to one-hot encodings
         train_feats = af.from_ndarray(iris.data.astype('float32'))
         train_targets = af.from_ndarray(ints_to_onehots(iris.target.astype('uint32'), num_classes))
         test_feats = af.from_ndarray(iris.data.astype('float32'))
@@ -140,14 +138,14 @@ class AFLogisticLogisticRegression(unittest.TestCase):
 
         # import pdb; pdb.set_trace()
 
-        # # actual d3m attempted arrayfire fails w/ missing columns method
-        # hyperparams = af_LogisticRegression.Hyperparams.defaults()
+        # actual d3m attempted arrayfire fails w/ missing columns method
+        hyperparams = af_LogisticRegression.Hyperparams.defaults()
 
-        # test_clf = af_LogisticRegression.af_LogisticRegression(hyperparams=hyperparams)
-        # train_set = iris.data
-        # targets = iris.target
-        # test_clf.set_training_data(inputs=train_set, outputs=targets)
-        # test_clf.fit()
+        test_clf = af_LogisticRegression.af_LogisticRegression(hyperparams=hyperparams)
+        train_set = iris.data
+        targets = iris.target
+        test_clf.set_training_data(inputs=train_set, outputs=targets)
+        test_clf.fit()
 
 
 
