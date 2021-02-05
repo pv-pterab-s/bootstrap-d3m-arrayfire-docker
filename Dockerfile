@@ -9,5 +9,10 @@ ENV LD_PRELOAD=/usr/local/lib/libmkl_core.so:/usr/local/lib/libmkl_sequential.so
 
 FROM arrayfire-v3.6.2
 
+# hack: baseline d3m-arrayfire-primitives installed from /mnt so that
+#       we can mount the development out/d3m-arrayfire-primitives over
+#       it and python references packages from the correct path
+ADD af-scikit-learn /mnt/af-scikit-learn
+RUN pip3 install -e /mnt/af-scikit-learn
 ADD d3m-arrayfire-primitives /mnt/d3m-arrayfire-primitives
 RUN pip3 install -e /mnt/d3m-arrayfire-primitives

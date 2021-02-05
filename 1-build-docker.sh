@@ -1,5 +1,5 @@
 #!/bin/bash
-# -*- compile-command: "./build-docker.sh"; -*-
+# -*- compile-command: "./1-build-docker.sh"; -*-
 set -ex
 
 D3M_DIR=$(pwd)/out
@@ -15,5 +15,6 @@ docker run \
        --rm \
        -v $D3M_DIR/datasets:/mnt/datasets \
        -v $D3M_DIR/d3m-arrayfire-primitives:/mnt/d3m-arrayfire-primitives \
+       -v $D3M_DIR/af-scikit-learn:/mnt/af-scikit-learn \
        arrayfire-d3m \
-       pip3 install -e /mnt/d3m-arrayfire-primitives
+       /bin/bash -c "pip3 install -e /mnt/af-scikit-learn && pip3 install -e /mnt/d3m-arrayfire-primitives"
