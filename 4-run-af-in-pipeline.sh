@@ -1,5 +1,5 @@
 #!/bin/bash
-# -*- compile-command: "./4-example-af.sh"; -*-
+# -*- compile-command: "./4-run-af-in-pipeline.sh"; -*-
 set -e
 
 D3M_DIR=$(pwd)/out
